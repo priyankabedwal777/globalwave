@@ -5,16 +5,12 @@ import HomeBanner from "./Components/HomeBaner";
 
 function App() {
   return (
-    <>
-      <div className="">
-        <div className="fixed w-full z-10">
-          <Navbar />
-        </div>
-        <div>
-          <HomeBanner />
-        </div>
-      </div>
-    </>
+    <div className="min-h-screen">
+      <Navbar />
+      <main>
+        <HomeBanner />
+      </main>
+    </div>
   );
 }
 
