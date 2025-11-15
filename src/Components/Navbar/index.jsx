@@ -1,77 +1,53 @@
 import React, { useState } from "react";
 import "./Navbar.css";
 import logo from "../../assets/logo.png";
-import { AiOutlineBars } from "react-icons/ai";
+import { AiOutlineBars, AiOutlineClose } from "react-icons/ai";
 
 const Navbar = () => {
-  // const [isMenuOpen, setIsMenuOpen] = useState(false);
+  const [isMenuOpen, setIsMenuOpen] = useState(false);
+
+  const toggleMenu = () => {
+    setIsMenuOpen(!isMenuOpen);
+  };
 
   return (
-    // <nav className="navbar">
-    //   <div className="logo">
-    //     <img src="/logo.png" alt="Logo" />
-    //   </div>
-    //   <ul className={`nav-links ${isMenuOpen ? 'active' : ''}`}>
-    //     <li>
-    //       <a href="#about">About Us</a>
-    //     </li>
-    //     <li>
-    //       <a href="#industries">Industries</a>
-    //     </li>
-    //     <li>
-    //       <a href="#outcomes">Why Outcomes</a>
-    //     </li>
-    //     <li>
-    //       <a href="#services">Services</a>
-    //     </li>
-    //     <li>
-    //       <a href="#process">Our Process</a>
-    //     </li>
-    //     <li>
-    //       <a href="#resources">Resources</a>
-    //     </li>
-    //     <li>
-    //       <a href="#careers">Careers</a>
-    //     </li>
-    //   </ul>
-    //   <div className="right-section">
-    //     <button className="get-started-btn">Get Started</button>
-    //     <button className="menu-toggle" onClick={() => setIsMenuOpen(!isMenuOpen)}>
-    //       ☰
-    //     </button>
-    //   </div>
-    // </nav>
     <nav className="navbar">
       <div className="logo">
-        <img src={logo} alt="Logo" />
+        <img src={logo} alt="GlobalWave Logo" />
       </div>
-      <ul className="nav-links">
+      <ul className={`nav-links ${isMenuOpen ? 'active' : ''}`}>
         <li>
-          <a href="#about">About Us</a>
+          <a href="#about" onClick={() => setIsMenuOpen(false)}>About Us</a>
         </li>
         <li>
-          <a href="#industries">Industries</a>
+          <a href="#industries" onClick={() => setIsMenuOpen(false)}>Industries</a>
         </li>
         <li>
-          <a href="#whyoutsource">Why Outsource</a>
+          <a href="#whyoutsource" onClick={() => setIsMenuOpen(false)}>Why Outsource</a>
         </li>
         <li>
-          <a href="#services">Services</a>
+          <a href="#services" onClick={() => setIsMenuOpen(false)}>Services</a>
         </li>
         <li>
-          <a href="#our-process">Our Process</a>
+          <a href="#our-process" onClick={() => setIsMenuOpen(false)}>Our Process</a>
         </li>
         <li>
-          <a href="#resources">Resources</a>
+          <a href="#resources" onClick={() => setIsMenuOpen(false)}>Resources</a>
         </li>
         <li>
-          <a href="#careers">Careers</a>
+          <a href="#careers" onClick={() => setIsMenuOpen(false)}>Careers</a>
         </li>
       </ul>
-      <button className="get-started">Get Started</button>
-      {/* <button className="menu-toggle">
-        <AiOutlineBars />
-      </button> */}
+      <div className="right-section">
+        <button className="get-started">Get Started</button>
+        <button 
+          className="menu-toggle" 
+          onClick={toggleMenu}
+          aria-label={isMenuOpen ? "Close menu" : "Open menu"}
+        >
+          {isMenuOpen ? <AiOutlineClose /> : <AiOutlineBars />}
+        </button>
+      </div>
     </nav>
   );
 };
