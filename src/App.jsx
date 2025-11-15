@@ -2,6 +2,7 @@ import { useState } from "react";
 import "./App.css";
 import Navbar from "./Components/Navbar";
 import HomeBanner from "./Components/HomeBaner";
+import WhoWeare from "./Components/WWR";
 
 function App() {
   return (
@@ -9,6 +10,7 @@ function App() {
       <Navbar />
       <main>
         <HomeBanner />
+        <WhoWeare />
       </main>
     </div>
   );

@@ -3,7 +3,7 @@ import homebaner from "../../assets/baner.png";
 
 const HomeBanner = () => {
   return (
-    <div className="homebanner relative">
+    <div className="homebanner">
       <img
         src={homebaner}
         alt="Global Capability Center banner showcasing innovation and growth"
