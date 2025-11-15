@@ -17,10 +17,10 @@ body {
 
 .homebanner {
   position: relative;
-  top: 100px;
+  top: 80px;
   width: 100%;
-  height: calc(100vh - 100px);
-  margin-bottom: 100px;
+  height: calc(100vh - 80px);
+  margin-bottom: 0;
 }
 
 .homebanner img {
@@ -32,7 +32,8 @@ body {
 
 @media (max-width: 768px) {
   .homebanner {
-    top: 80px;
-    height: calc(100vh - 80px);
+    top: 70px;
+    height: calc(100vh - 70px);
+    margin-bottom: 0;
   }
 }
