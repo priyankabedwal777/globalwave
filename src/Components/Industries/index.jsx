@@ -16,9 +16,11 @@ const Industries = () => {
       </div>
 
       <div className="grid grid-cols-1 lg:grid-cols-2 gap-8">
-        <div className="bg-white rounded-lg shadow-lg">
-          <div className="p-8">
-            <h2 className="text-2xl font-bold mb-4 text-[#EA372F]">Aviation</h2>
+        <div className="bg-white rounded-lg shadow-lg hover:shadow-2xl hover:scale-105 hover:-translate-y-2 transition-all duration-500 cursor-pointer group overflow-hidden relative before:absolute before:inset-0 before:bg-gradient-to-br before:from-[#EA372F]/5 before:to-transparent before:opacity-0 hover:before:opacity-100 before:transition-opacity before:duration-500">
+          <div className="p-8 relative z-10">
+            <h2 className="text-2xl font-bold mb-4 text-[#EA372F] group-hover:text-red-600 transition-colors duration-300">
+              Aviation
+            </h2>
             <p className="font-semibold mb-4">
               Your High-Performing Global Center Engineered to Accelerate
               Innovation in Aviation. loreem ipsum dolor sit amet, consectetur
@@ -31,16 +33,19 @@ const Industries = () => {
               Capability Centers.
             </p>
           </div>
-          <div className="flex  items-start">
-            <button className="bg-[#EA372F] text-white px-5 py-2 ml-8 rounded hover:bg-red-600">
+          <div className="flex  items-start relative z-10">
+            <button className="bg-[#EA372F] text-white px-5 py-2 ml-8 rounded hover:bg-red-600 group-hover:shadow-lg transform group-hover:scale-105 transition-all duration-300">
               Know More
             </button>
-            <img src={indimg1} className="" />
+            <img
+              src={indimg1}
+              className="group-hover:scale-110 transition-transform duration-500"
+            />
           </div>
         </div>
-        <div className="bg-white rounded-lg shadow-lg">
-          <div className="p-8">
-            <h2 className="text-2xl font-bold text-[#EA372F] mb-4">
+        <div className="bg-white rounded-lg shadow-lg hover:shadow-2xl hover:scale-105 hover:-translate-y-2 transition-all duration-500 cursor-pointer group overflow-hidden relative before:absolute before:inset-0 before:bg-gradient-to-br before:from-[#EA372F]/5 before:to-transparent before:opacity-0 hover:before:opacity-100 before:transition-opacity before:duration-500">
+          <div className="p-8 relative z-10">
+            <h2 className="text-2xl font-bold text-[#EA372F] mb-4 group-hover:text-red-600 transition-colors duration-300">
               Shipping & Logistics
             </h2>
             <p className="font-semibold mb-4">
@@ -56,11 +61,14 @@ const Industries = () => {
               management, supply chain optimization, and customs automation.
             </p>
           </div>
-          <div className="flex items-start">
-            <button className="bg-[#EA372F] text-white px-5 py-2 ml-8 rounded hover:bg-red-600">
+          <div className="flex items-start relative z-10">
+            <button className="bg-[#EA372F] text-white px-5 py-2 ml-8 rounded hover:bg-red-600 group-hover:shadow-lg transform group-hover:scale-105 transition-all duration-300">
               Know More
             </button>
-            <img src={indimg2} className="" />
+            <img
+              src={indimg2}
+              className="group-hover:scale-110 transition-transform duration-500"
+            />
           </div>
         </div>
       </div>

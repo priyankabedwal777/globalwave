@@ -17,14 +17,17 @@ const Card = () => {
           {cardData.map((card) => (
             <div
               key={card.id}
-              className="bg-white rounded-lg p-4 text-center shadow-lg hover:shadow-xl transition-shadow"
+              className="group relative bg-white rounded-xl p-6 text-center shadow-lg hover:shadow-2xl hover:scale-110 hover:-translate-y-3 transition-all duration-500 cursor-pointer overflow-hidden border border-gray-100 hover:border-transparent"
             >
-              <div className="flex flex-col items-center space-y-4">
-                <img src={card.icon} alt="Card icon" className="w-16 h-16" />
-                <h3 className="text-3xl font-bold text-[#1E2361]">
+              <div className="absolute inset-0 bg-gradient-to-br from-blue-500 via-purple-500 to-pink-500 opacity-0 group-hover:opacity-100 transition-opacity duration-500"></div>
+              <div className="relative z-10 flex flex-col items-center space-y-4">
+                <div className="transform group-hover:scale-110 group-hover:rotate-12 transition-all duration-500">
+                  <img src={card.icon} alt="Card icon" className="w-16 h-16 group-hover:brightness-0 group-hover:invert transition-all duration-300" />
+                </div>
+                <h3 className="text-3xl font-bold text-[#1E2361] group-hover:text-white transition-colors duration-300 transform group-hover:scale-105">
                   {card.amount}
                 </h3>
-                <p className="text-gray-600 text-lg">{card.label}</p>
+                <p className="text-gray-600 text-lg group-hover:text-white/90 transition-colors duration-300">{card.label}</p>
               </div>
             </div>
           ))}
