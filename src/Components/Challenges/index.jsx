@@ -7,8 +7,8 @@ const Challanges = () => {
       <section className=" bg-[#1E2361] mt-16 py-20 px-20 rounded-3xl">
         <div className="grid grid-cols-1 lg:grid-cols-2 gap-8">
           <div className="text-white flex flex-col ">
-            <h1 className="text-[#EA372F] ">Challenges We Solve</h1>
-            <p className=" text-3xl pt-4">
+            <h1 className="text-[#EA372F]">Challenges We Solve</h1>
+            <p className="text-3xl pt-4">
               Solving the Challenges of Global Expansion to Build Your
               High-Performing Global Team and Drive Lasting Transformation.
             </p>
@@ -38,7 +38,7 @@ const Challanges = () => {
             <img
               src={challangeimg}
               alt="domyimg"
-              className=" w-auto  h-[550px] bg-cover bg-center "
+              className="w-auto h-[550px] bg-cover bg-center"
             />
           </div>
         </div>
